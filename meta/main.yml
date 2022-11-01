@@ -1,0 +1,18 @@
+---
+galaxy_info:
+  role_name: cron
+  namespace: leadlineit
+  author: Stas Stavnichuk
+  description: Configure cron.d files
+  license: BSD
+  min_ansible_version: '2.5'
+  platforms:
+    - name: Debian
+      versions:
+        - bullseye
+        - buster
+        - stretch
+  galaxy_tags:
+    - system
+    - debian
+    - cron
