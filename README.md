@@ -22,7 +22,7 @@ cron:
         user: root
         minute: 33
         hour: 3
-        dateday: 3
+        month_day: 3
         month: 3
         weekday: 3
         job: /usr/local/bin/some_script_for_backup.sh > /dev/null
@@ -46,7 +46,7 @@ cron:
         user: root
         minute: *
         hour: *
-        dateday: *
+        month_day: *
         month: *
         weekday: *
 ```

@@ -6,7 +6,7 @@
 
 ## {{ v.name }}
 {% endif %}
-{% if v.state|default('present') == 'present' %}
-{{ v.minute|default('*') }} {{ v.hour|default('*') }} {{ v.day|default('*') }} {{ v.month|default('*') }} {{ v.weekday|default('*') }}{{ '\t' }}{{ v.user|default('root') }}{{ '\t' }}{{ v.job }}
+{% if v.state | default('present') == 'present' %}
+{{ v.minute | default('*') }} {{ v.hour | default('*') }} {{ v.month_day | default('*') }} {{ v.month | default('*') }} {{ v.weekday | default('*') }}{{ '\t' }}{{ v.user | default('root') }}{{ '\t' }}{{ v.job }}
 {% endif %}
 {% endfor %}
