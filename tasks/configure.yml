@@ -1,0 +1,23 @@
+---
+- name: Add cron.d file(s)
+  when: (cron is defined) and (item.state | default('present') == 'present')
+  ansible.builtin.template: 
+    src: cron.j2
+    dest: /etc/cron.d/{{ item.file }}
+    mode: '0644'
+    owner: root
+    group: root
+  with_items: 
+    - "{{ cron }}"
+  notify:
+    - Restart cron service
+
+- name: Delete unmanaged cron.d file(s)
+  when: (cron is defined) and (item.state | default('present') == 'absent')
+  ansible.builtin.file:
+    path: /etc/cron.d/{{ item.file }}
+    state: absent
+  with_items: 
+    - "{{ cron }}"
+  notify:
+    - Restart cron service

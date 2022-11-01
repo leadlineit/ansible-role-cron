@@ -3,7 +3,7 @@ galaxy_info:
   role_name: cron
   namespace: leadlineit
   author: Stas Stavnichuk
-  description: Configure cron.d files
+  description: Install and configure cron.d
   license: BSD
   min_ansible_version: '2.5'
   platforms:

@@ -1,19 +1,12 @@
 ---
-- name: Add cron.d file(s)
-  when: (cron is defined) and (item.state | default('present') == 'present')
-  ansible.builtin.template: 
-    src: cron.j2
-    dest: /etc/cron.d/{{ item.file }}
-    mode: '0644'
-    owner: root
-    group: root
-  with_items: 
-    - "{{ cron }}"
+- name: Include ./install.yml
+  ansible.builtin.import_tasks: install.yml
+  tags:
+    - install_cron
+    - install
 
-- name: Delete unmanaged cron.d file(s)
-  when: (cron is defined) and (item.state | default('present') == 'absent')
-  ansible.builtin.file:
-    path: /etc/cron.d/{{ item.file }}
-    state: absent
-  with_items: 
-    - "{{ cron }}"
+- name: Include ./configure.yml
+  ansible.builtin.import_tasks: configure.yml
+  tags:
+    - configure_cron
+    - configure

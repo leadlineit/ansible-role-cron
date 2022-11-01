@@ -3,7 +3,7 @@
 ![Build Status](https://github.com/leadlineit/ansible-role-cron/actions/workflows/ansible-galaxy-ci.yml/badge.svg)
 [![Galaxy Role](https://img.shields.io/badge/Ansible--Galaxy-leadlineit.cron-blue.svg?logo=ansible&logoColor=white)](https://galaxy.ansible.com/leadlineit/cron/)
 
-This role helps to configure cron.d files on a Debian (stretch/buster/bullseye).
+This role helps to install and configure cron.d files on a Debian (stretch/buster/bullseye).
 
 Requirements
 ------------
