@@ -7,8 +7,7 @@
     mode: '0644'
     owner: root
     group: root
-  with_items: 
-    - "{{ cron }}"
+  with_items: "{{ cron }}"
   notify:
     - Restart cron service
 
@@ -17,7 +16,6 @@
   ansible.builtin.file:
     path: /etc/cron.d/{{ item.file }}
     state: absent
-  with_items: 
-    - "{{ cron }}"
+  with_items: "{{ cron }}"
   notify:
     - Restart cron service
