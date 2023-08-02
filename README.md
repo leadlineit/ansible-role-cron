@@ -1,14 +1,21 @@
-# Ansible Role Cron
+# Ansible Galaxy role for install and configure cron.d files.
 
 ![Build Status](https://github.com/leadlineit/ansible-role-cron/actions/workflows/ansible-galaxy-ci.yml/badge.svg)
 [![Galaxy Role](https://img.shields.io/badge/Ansible--Galaxy-leadlineit.cron-blue.svg?logo=ansible&logoColor=white)](https://galaxy.ansible.com/leadlineit/cron/)
 
-This role helps to install and configure cron.d files on a Debian (stretch/buster/bullseye).
+This role helps to install and configure cron.d files.
+
+Supported OSes
+--------------
+- Debian 12 (bookworm)
+- Debian 11 (bullseye)
+- Debian 10 (buster)
+- Debian 9 (stretch)
 
 Requirements
 ------------
 
-This role requires Ansible 2.5 or higher.
+This role requires Ansible 2.11 or higher.
 
 Role Variables
 --------------
